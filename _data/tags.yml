@@ -1,0 +1,12 @@
+project :
+  name: project
+  description: False
+  cover: assets/built/images/background-frontend.JPG
+blog :
+  name: blog
+  description: False
+  cover: assets/built/images/background-frontend.jpg
+news :
+  name: news
+  description: False
+  cover: assets/built/images/background-frontend.JPG
