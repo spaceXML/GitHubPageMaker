@@ -28,4 +28,4 @@ a0LQI1TP+hXw1yF7y62iPV8ZRVSWItZDOFxsucHfOD280LPv/eukuK9xpmV4EY71ZZhd8p7o+XGJDaDG
 /lKNzy1SPv0y8DVoYKccT8y9OFSBCyHV5MkGRY0Elp6I7MQtZA="
 branches:
   only:
-    - master
+    - main
