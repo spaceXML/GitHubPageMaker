@@ -111,12 +111,12 @@ safe: False
 lsi: False
 
 username: spaceXML
-repo: GitHubPageMaker
+repo: spaceXML.github.io
 # username : travis-ci와 연동하는 github의 username
 # repo: travis-ci와 연동하는 github의 repository이름
 # https://github.com/<username>/<repository>
 
-branch: master
+branch: gh-pages
 # 사용할 branch명
 
 relative_source:

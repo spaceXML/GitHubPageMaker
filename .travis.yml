@@ -1,31 +1,27 @@
-sudo: false
+# 루비를 이용하여 빌드.
 language: ruby
-cache: bundler
-rvm:
-  - 2.6.6
 
+# 번들러의 캐시 기능을 사용.
+cache: bundler
+
+# 빌드에 필요한 gem 파일들을 다운로드.
 install:
-  # Install Jekyll and dependencies
   - bundle install
 
-before_script:
-  - git config --global user.email "okskycar1@gmail.com"
-  - git config --global user.name "younggwon Seol"
+# rake를 이용하여 jekyll 실행.
+script:
+  - bundle exec rake site:deploy --quiet
 
-script: bundle exec rake site:deploy --quiet #--trace
+# gh-pages 브랜치의 push 또는 pull request 이벤트에 대해서 실행.
+branches:
+  only:
+    - gh-pages
 
-# Generate your secure token with the travis gem:
-# get Github token from your Travis CI profile page
-# gem install travis
-# GH_TOKEN from https://github.com/settings/tokens
+# rvm 버전을 설정
+rvm:
+  - 2.6.3
+
 # travis encrypt 'GIT_NAME="YOUR_USERNAME" GIT_EMAIL="YOUR_EMAIL" GH_TOKEN=YOUR_TOKEN'
 env:
   global:
-    secure: "AWDCkj/Q8tzWJ7z5vRCmKmz5OT5z8HKBIqJCvwcrNUt+a2FcrgGMJ/wRSP4mJv+Bgh2bUotySDomzH83sAf8crhIybBui658K7iaTCwwS/ddIofFpXMr+dTty5uKM/vpLz0U2c3Qk6O3P9RK3kYHAl
-B/f9hs+9FKV32D9flyJTfzlSX21YEr6Ud+YkT5TnWj2BNhymdcsnpU2kEzWi+/9zkRPEWGSce7eGL7V+L0dVpjxfgfakZP0BoolwPhZ/0nKXF1r43YvOPkZYCstlcxiW5CHVM5xKAxX9G128A5wDtv062zST8SHrK
-YvQeq/Fcvdrq6fJwVTtwZygaqiYccE+Gl7uIGW/cttbDaSLeNWdOLtT6F2RFEvQehwxj0+KTYAXImZkADUkKqsmEIWGz+aqXQGbzFB7Mjd2Ik4lpsPjdkUqHZRoz0500ix9XTex2FXiyzXMf7sP/WabwSW+4nxcma
-a0LQI1TP+hXw1yF7y62iPV8ZRVSWItZDOFxsucHfOD280LPv/eukuK9xpmV4EY71ZZhd8p7o+XGJDaDGrBOr79yxP+55qQZZ5hUObkscwcwCIIrkfUHGhy2xKvjc6XisouVpkNIjbmWpqdSZWOgJ0AH1vw0czpqO8
-/lKNzy1SPv0y8DVoYKccT8y9OFSBCyHV5MkGRY0Elp6I7MQtZA="
-branches:
-  only:
-    - master
+    secure: <your_secure_code>
