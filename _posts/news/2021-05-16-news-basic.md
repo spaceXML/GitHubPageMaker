@@ -1,13 +1,13 @@
 ---
 layout: post
 current: post
-cover: assets/built/images/web-logo.JPG
+cover: assets/built/images/news-logo.JPG
 navigation: True
-title: Python 
-date: 2021-05-12 10:31:00
-tags: [coupang]
+title: news
+date: 2021-05-12 10:32:00
+tags: [news]
 class: post-template
-subclass: 'post tag-coupang'
+subclass: 'post tag-news'
 author: spaceXML
 ---
 

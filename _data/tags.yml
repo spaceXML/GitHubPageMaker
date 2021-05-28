@@ -3,10 +3,20 @@ project :
   description: False
   cover: assets/built/images/background-frontend.JPG
 blog :
-  name: blog
-  description: False
-  cover: assets/built/images/background-frontend.jpg
-news :
-  name: news
+  name : blog
   description: False
   cover: assets/built/images/background-frontend.JPG
+news :
+  name : news
+  description: False
+  cover: assets/built/images/background-frontend.JPG
+coupang :
+  name : coupang
+  description: False
+  cover: assets/built/images/background-frontend.JPG
+OK스카이차 :
+  name : OK스카이차
+  description: False
+  cover: assets/built/images/background-frontend.JPG
+
+
